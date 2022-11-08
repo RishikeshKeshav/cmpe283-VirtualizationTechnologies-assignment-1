@@ -33,9 +33,11 @@ c) IA32_VMX_PROCBASED_CTLS2 0x48B
 d) IA32_VMX_EXIT_CTLS 0x483
 e) IA32_VMX_ENTRY_CTLS 0x484
 f) IA32_VMX_PROCBASED_CTLS3 0X92
-viii.	Run under the same directory with MakeFile and cmpe283.c file in terminal using the command
+vii. Run the command sudo apt install linux-headers-$(uname -r) to add the linux-headers package to the VM
+ix.	Run under the same directory with MakeFile and cmpe283.c file in terminal using the command
 make
-ix.	Files generated are:-
+
+x.	Files generated are:-
  total 560
 drwxr-xr-x 3 rishikeshkeshav_andhare rishikeshkeshav_andhare   4096 Nov  8 04:40 .
 drwxr-xr-x 6 rishikeshkeshav_andhare rishikeshkeshav_andhare   4096 Nov  8 04:43 ..
@@ -59,10 +61,11 @@ drwxr-xr-x 8 rishikeshkeshav_andhare rishikeshkeshav_andhare   4096 Nov  8 04:51
 -rw-r--r-- 1 rishikeshkeshav_andhare rishikeshkeshav_andhare     53 Nov  8 04:18 modules.order
 
 
-x.	Run the command sudo insmod cmpe283.ko to run the source file
-xi.	Run sudo dmesg to detect the capabilities on the VM for the MSR’
-xii.	Upon running these command we will be able to see the message outputs for the MSR’s pin-based, primary, secondary and tertiary procbased, exit and entry  control on terminal.
-Snapshot :
+xi.	Run the command sudo insmod cmpe283.ko to run the source file
+xii.	Run sudo dmesg to detect the capabilities on the VM for the MSR’s
+xiii.	Upon running these command we will be able to see the message outputs for the MSR’s pin-based, primary, secondary and tertiary procbased, exit and entry  control on terminal.
+OUTPUTS:-
+
 IA32_VMX_PINBASED_CTLS 0x481  (output )
 
  [19724.142906] CMPE 283 Assignment 1 Module Start
@@ -167,6 +170,7 @@ IA32_VMX_ENTRY_CTLS 0x484(output )
 [19724.671458]   Load PKRS: Can set=No, Can clear=Yes
  
 IA32_VMX_PROCBASED_CTLS3 0X92(output )
+ ** Tertiary processor Based MSR is not enable on my system
  
 [19724.477911] Processor based Tertiary Controls MSR: 0x0
 [19724.483242]   LOADIWKEY Exiting: Can set=No, Can clear=Yes
